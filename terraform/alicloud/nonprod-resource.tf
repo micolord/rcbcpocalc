@@ -127,7 +127,7 @@ resource "alicloud_instance" "server_1" {
 resource "alicloud_security_group" "nonprod-sg" {
   count = var.env_name != "prod" ? 1 : 0
   resource_group_id = alicloud_resource_manager_resource_group.rg.id
-  name        = "${var.env_name}-${var.project}-nonprod-sg"
+  security_group_name  = "${var.env_name}-${var.project}-nonprod-sg"
   description = "${var.env_name}-${var.project} security group"
   vpc_id = module.vpc.vpc_id
 }
