@@ -111,7 +111,7 @@ resource "alicloud_instance" "server_1" {
   instance_name        = "${var.env_name}-${var.project}-server"
   image_id             = var.image_id
   instance_type        = "ecs.g7.large"
-  security_groups      = [alicloud_security_group.dev-sg[count.index].id]
+  security_groups      = [alicloud_security_group.nonprod-sg[count.index].id]
   vswitch_id           = module.vpc.vswitch_ids[1]
   password             = "dynamic_random_password"
   system_disk_category = "cloud_essd"
