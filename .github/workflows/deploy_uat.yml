@@ -1,4 +1,4 @@
-name: Deploy Uat
+name: Deploy Uat Env
 permissions:
   security-events: write
 
