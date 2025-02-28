@@ -101,6 +101,7 @@ resource "alicloud_alb_server_group" "server_group" {
     port        = 80
     server_id   = alicloud_instance.server_1[count.index].id
     server_type = "Ecs"
+    weight = 100
   }
 }
 
