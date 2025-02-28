@@ -17,7 +17,7 @@ gl_be_domain = "gl-be.kumaxxkumaxx-dev.ph"
 bo_fe_domain = "bo-fe.XXXXXXXX"
 bo_be_domain = "bo-be.XXXXXXXX"
 jobproc_domain = "jobproc.XXXXXXXX"
-cert_id = "176119-ap-southeast-1"
+cert_id = "187643-ap-southeast-1"
 
 // image id
 image_id = "ubuntu_24_04_x64_20G_alibase_20241224.vhd"
