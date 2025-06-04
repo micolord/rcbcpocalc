@@ -1,5 +1,5 @@
 region  = "ap-southeast-1"
-project = "wemaxxlp"
+project = "rcbcpoc"
 env_name = "dev"
 
 // network details
