@@ -1,4 +1,4 @@
-// PROJECT NETWORK VARIABLES
+// PROJECT NETWORK VARIABLESS
 variable "env_name" {
     description = "Environment Name"
 }
