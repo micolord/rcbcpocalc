@@ -51,28 +51,28 @@ resource "alicloud_alb_listener" "http_80" {
 
 
 // listener port 443
-resource "alicloud_alb_listener" "https_443" {
-  count = var.env_name != "prod" ? 1 : 0
-  load_balancer_id     = alicloud_alb_load_balancer.alb[count.index].id
-  listener_protocol    = "HTTPS"
-  listener_port        = 443
-  listener_description = "${var.env_name}-${var.project}-443-listener"
-  x_forwarded_for_config {
-    x_forwarded_for_proto_enabled = true
-    x_forwarded_for_enabled = true
-  }
-  default_actions {
-    type = "ForwardGroup"
-    forward_group_config {
-      server_group_tuples {
-       server_group_id = alicloud_alb_server_group.server_group[count.index].id
-      }
-    }
-  }
-  certificates {
-    certificate_id = var.cert_id
-  }
-}
+#resource "alicloud_alb_listener" "https_443" {
+#  count = var.env_name != "prod" ? 1 : 0
+#  load_balancer_id     = alicloud_alb_load_balancer.alb[count.index].id
+#  listener_protocol    = "HTTPS"
+#  listener_port        = 443
+#  listener_description = "${var.env_name}-${var.project}-443-listener"
+#  x_forwarded_for_config {
+#    x_forwarded_for_proto_enabled = true
+#    x_forwarded_for_enabled = true
+#  }
+#  default_actions {
+#    type = "ForwardGroup"
+#    forward_group_config {
+#      server_group_tuples {
+#       server_group_id = alicloud_alb_server_group.server_group[count.index].id
+#      }
+#    }
+#  }
+#  certificates {
+#    certificate_id = var.cert_id
+#  }
+#}
 
 // Server Group
 resource "alicloud_alb_server_group" "server_group" {
