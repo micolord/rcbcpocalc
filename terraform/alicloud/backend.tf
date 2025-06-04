@@ -1,7 +1,7 @@
 // alibaba backend configuration for terraform
 terraform {
   backend "oss" {
-    bucket = "dynamic_env-state-bucket-rcbcpoc"
+    bucket = "dynamic_env-state-bucket-rcbcpoc123"
     key   = "dynamic_env-state.tfstate"
     region = "ap-southeast-1"
   }
